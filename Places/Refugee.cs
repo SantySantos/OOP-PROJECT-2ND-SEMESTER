@@ -9,7 +9,7 @@ namespace OOP_PROJECT.Places
 {
     internal class Refugee : Place
     {
-        Characters MainCharacter = Switch.MainCharacter;
+        Characters MainCharacter = Main_Character_Description.Switch.MainCharacter;
         internal override string Description()
         {
             Console.WriteLine();

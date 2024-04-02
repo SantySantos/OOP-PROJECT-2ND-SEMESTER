@@ -39,6 +39,7 @@ namespace OOP_PROJECT.Main_Character_Description
             return Aria;
         }
 
+
         public void CharacterDescription()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -55,4 +56,6 @@ namespace OOP_PROJECT.Main_Character_Description
     }
 
     
+
+
 }

@@ -9,17 +9,15 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using OOP_PROJECT;
 using OOP_PROJECT.Main_Character_Description;
+using System.Net.Security;
 
 namespace OOP_PROJECT.Places
 {
     internal class MainStore : Place
     {
-        private Characters MainCharacter;
-        public MainStore(Characters mainCharacter)
-        {
-            MainCharacter = mainCharacter;
-        }
-
+        Characters MainCharacter = Main_Character_Description.Switch.MainCharacter;
+        
+       
         internal override string Description()
         {
             return @"STORE
@@ -32,7 +30,6 @@ namespace OOP_PROJECT.Places
 
 What option do you pick(write the number)?";
 
- 
         }
         private string GoldReturn(int price)
         {

@@ -9,26 +9,27 @@ using OOP_PROJECT.Main_Character_Description;
 
 namespace OOP_PROJECT.Main_Character_Description
 {
-    internal class Switch
-    {
-        public static Characters MainCharacter = new Characters();
+        internal class Switch
+        {
 
-        static bool IsChosen;
-        internal bool ChoosingChar() => IsChosen;
-        internal static void ChooseTrue()
-        {
-            IsChosen = true;
-        }
-        public void CharacterSelect(string choice)
-        {
+            public static Characters MainCharacter = new Characters();
+
+            static bool IsChosen;
+            internal bool ChoosingChar() => IsChosen;
+            internal static void ChooseTrue()
+            {
+                IsChosen = true;
+            }
+            public void CharacterSelect(string choice)
+            {
 
             MaleCharacters characterMale = new MaleCharacters();
             FemaleCharacters characterFemale = new FemaleCharacters();
-            ChoosingCharacter characterChosen = new ChoosingCharacter();
-            
 
-            switch (choice)
-            {
+            ChoosingCharacter characterChosen = new ChoosingCharacter();
+
+                switch (choice)
+                {
                 case "a":
                     characterMale.GeneralMaleDescription();
                     Console.ResetColor();
@@ -55,10 +56,11 @@ namespace OOP_PROJECT.Main_Character_Description
                     Console.ReadKey();
                     Console.Clear();
                     break;
+                }
             }
-    }
+                
+        }
+ }
 
-        
-    }
-}
+   
 

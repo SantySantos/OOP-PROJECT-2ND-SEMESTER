@@ -10,10 +10,10 @@ internal class program
 {
     static void Main(string[] args)
     {
-        Characters MainCharacter = Switch.MainCharacter;
+        Characters MainCharacter = OOP_PROJECT.Main_Character_Description.Switch.MainCharacter;
         var game = new Game();
         game.Add(new Refugee());
-        game.Add(new MainStore(MainCharacter));
+        game.Add(new MainStore());
         game.Add(new Forest());
         game.Add(new Dungeon());
         game.Add(new GunSmith());
