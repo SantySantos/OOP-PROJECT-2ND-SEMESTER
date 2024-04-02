@@ -7,7 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
-
+using OOP_PROJECT.Main_Character_Description;
 namespace OOP_PROJECT.Places
 {
     internal class MainStore : Place
@@ -56,6 +56,7 @@ What option do you pick(write the number)?";
         }
         static int GoldReturn()
         {
+            
             return 0;
         }
     }

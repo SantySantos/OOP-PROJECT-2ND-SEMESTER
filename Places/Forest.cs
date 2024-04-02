@@ -30,7 +30,7 @@ namespace OOP_PROJECT.Places
         }
         internal void Instructions()
         {
-            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("INSTRUCTIONS");
             Console.WriteLine(@"In the forest, you will need to 
 collect gold to be able to buy things in the store, while you are there, you will be receiving
@@ -46,6 +46,7 @@ HAVE FUN
 press any key to continue...");
             Console.ReadKey();
             Console.Clear();
+            Console.ResetColor();
         }
        
     }
