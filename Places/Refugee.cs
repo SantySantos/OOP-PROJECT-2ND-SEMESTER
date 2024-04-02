@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP_PROJECT.Main_Character_Description;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace OOP_PROJECT.Places
 {
     internal class Refugee : Place
     {
+        Characters MainCharacter = Switch.MainCharacter;
         internal override string Description()
         {
             Console.WriteLine();
@@ -29,6 +31,8 @@ the power to restore life to the world. Only the bravest and most skilled advent
 
 The refuge is a place of respite and preparation
 
+Write [1] to see your actual stats
+
 
 
 write the place where you want to go";
@@ -46,6 +50,14 @@ write the place where you want to go";
                     break;
                 case "dungeon":
                     Game.Transition<Dungeon>();
+                    break;
+                case "gunsmith":
+                    Game.Transition<GunSmith>();
+                    break;
+                case "1":
+                    Console.WriteLine(MainCharacter.Name);
+                    //Console.WriteLine(MainCharacter.hp);
+                    Console.WriteLine(MainCharacter.gold); 
                     break;
                 default:
                     Console.WriteLine("that's not a place, try again");

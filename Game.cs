@@ -18,16 +18,16 @@ namespace OOP_PROJECT
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextPlace = "";
-       
+        
 
-
+       Characters MainCharacter = new Characters();
        Switch choosechar = new Switch();
-       MainStore GoingStore = new MainStore();
+       //MainStore GoingStore = new MainStore();
        ContextStory ContextStory = new ContextStory();
 
         public void Selection(string choice)
         {
-             choosechar.CharacterSelect(choice);
+            choosechar.CharacterSelect(choice);
         }
 
         internal void Add(Place place)

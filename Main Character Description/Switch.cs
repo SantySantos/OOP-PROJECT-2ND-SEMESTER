@@ -11,6 +11,8 @@ namespace OOP_PROJECT.Main_Character_Description
 {
     internal class Switch
     {
+        public static Characters MainCharacter = new Characters();
+
         static bool IsChosen;
         internal bool ChoosingChar() => IsChosen;
         internal static void ChooseTrue()
@@ -23,7 +25,6 @@ namespace OOP_PROJECT.Main_Character_Description
             MaleCharacters characterMale = new MaleCharacters();
             FemaleCharacters characterFemale = new FemaleCharacters();
             ChoosingCharacter characterChosen = new ChoosingCharacter();
-            Characters MainCharacter = new Characters();
             
 
             switch (choice)
@@ -34,7 +35,6 @@ namespace OOP_PROJECT.Main_Character_Description
                     characterFemale.GeneralFemaleDescription();
                     Console.ReadKey();
                     Console.Clear();
-
                     break;
                 case "b":
                     MainCharacter = characterChosen.Man();
@@ -52,9 +52,12 @@ namespace OOP_PROJECT.Main_Character_Description
                     break;
                 default:
                     Console.WriteLine("you have chosen an invalid option");
+                    Console.ReadKey();
+                    Console.Clear();
                     break;
             }
-        }
+    }
+
         
     }
 }
