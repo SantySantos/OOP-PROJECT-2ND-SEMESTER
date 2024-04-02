@@ -7,7 +7,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using OOP_PROJECT;
 using OOP_PROJECT.Main_Character_Description;
+
 namespace OOP_PROJECT.Places
 {
     internal class MainStore : Place
@@ -15,13 +17,11 @@ namespace OOP_PROJECT.Places
         internal override string Description()
         {
             return @"STORE
-1. Healthy if life
-2. Basic Damage
-3. Critical Damage
-4. +10 armor
-5. +5 life
-6. 50/50.
-7. go back to refugee
+1. Fruits, regenarates 5 hp - 10 gold
+2. Super fruits, regerates 20 hp - 40 gold
+3. Chocolate bar - more resistance in the forest - 2 seconds of invulneravility - 20 gold 
+4. 50/50 chance 
+5. go back to refugee
 
 
 What option do you pick(write the number)?";
@@ -32,8 +32,7 @@ What option do you pick(write the number)?";
         {
             switch (choice2)
             {
-                case "1":
-                    
+                case "1":                   
                     break;
                 case "2":
                     break;
@@ -42,10 +41,6 @@ What option do you pick(write the number)?";
                 case "4":
                     break;
                 case "5":
-                    break;
-                case "6":
-                    break;
-                case "7":
                     Game.Transition<Refugee>();
                     break;
                 default:

@@ -6,120 +6,49 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace OOP_PROJECT.Story
+namespace OOP_PROJECT.Main_Character_Description
 {
     internal class MaleCharacters : Characters
     {
-        public override string Name { get; set; } = "Kairos";
-        public override double hp { get; set; } = 120;
-        public override int gold { get; set; } = 100;
-        public override double agility { get; set; } = 80;
-        public override int armor { get; set; } = 60;
-        public override int speed { get; set; } = 40;
+        public override string Name { get; set; }
+        public override double hp { get; set; }
+        public override int gold { get; set; } 
+        public override double agility { get; set; } 
+        public override int armor { get; set; } 
+        public override int speed { get; set; } 
         public void GeneralMaleDescription()
         {
             Console.WriteLine();
             Console.WriteLine("-------------------------------");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"Hello, I am {this.Name}");
-            Console.WriteLine($"HP: {this.hp}");
-            Console.WriteLine($"Gold : {this.gold}");
-            Console.WriteLine($"Agility: {this.agility}");
-            Console.WriteLine($"Armor: {this.armor}");
-            Console.WriteLine($"Speed: {this.speed} ");   
+            Console.WriteLine($"Hello, I am Kairos");
+            Console.WriteLine($"HP: 120");
+            Console.WriteLine($"Gold : 100");
+            Console.WriteLine($"Agility: 80");
+            Console.WriteLine($"Armor: 60");
+            Console.WriteLine($"Speed: 40 ");
         }
     }
     internal class FemaleCharacters : Characters
     {
-        public override string Name { get; set; } = "Aria";
-        public override double hp { get; set; } = 100;
-        public override int gold { get ; set ; } = 100;
-        public override double agility { get; set; } = 100;
-        public override int armor { get; set; } = 40;
-        public override int speed { get; set; } = 60;
+        public override string Name { get; set; } 
+        public override double hp { get; set; } 
+        public override int gold { get; set; } 
+        public override double agility { get; set; }
+        public override int armor { get; set; } 
+        public override int speed { get; set; } 
         public void GeneralFemaleDescription()
         {
-            Console.WriteLine();         
+            Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("-------------------------------");
-            Console.WriteLine($"Hello, I am {this.Name}");
-            Console.WriteLine($"HP: {this.hp}");
-            Console.WriteLine($"Gold : {this.gold}");
-            Console.WriteLine($"Agility: {this.agility}");
-            Console.WriteLine($"Armor: {this.armor}");
-            Console.WriteLine($"Speed: {this.speed} ");
-            
-        }
-    }
-    internal class ChoosingCharacter
-    {
-        static bool IsChosen;
-        internal bool ChoosingChar() => IsChosen;
-        internal static void ChooseTrue()
-        {
-            IsChosen = true;
-        }
+            Console.WriteLine($"Hello, I am Aria");
+            Console.WriteLine($"HP: 100");
+            Console.WriteLine($"Gold : 100");
+            Console.WriteLine($"Agility: 100");
+            Console.WriteLine($"Armor: 40");
+            Console.WriteLine($"Speed: 60");
 
-        MaleCharacters characterMale = new MaleCharacters();
-        FemaleCharacters characterFemale = new FemaleCharacters();
-        public void CharacterDescription()
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine(@"Please choose your character
-[A] See characteristics
-[B] select Kairos
-[C] Select Aira");
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine();
-            Console.WriteLine("Choose a character");
-        }
-
-        public void CharacterSelect(string choice)
-        {
-
-            switch (choice)
-            {
-                case "a":
-                    characterMale.GeneralMaleDescription();
-                    Console.ResetColor();
-                    characterFemale.GeneralFemaleDescription();
-                    Console.ReadKey();
-                    Console.Clear();
-                    CharacterDescription();
-                    break;
-                case "b":
-                    characterMale.GeneralMaleDescription();
-                    FinalCharacter(choice);
-                    break;
-                case "c":
-                    characterFemale.GeneralFemaleDescription();
-                    FinalCharacter(choice);
-                    break;
-                default:
-                    Console.WriteLine("you have chosen an invalid option");
-                    break;
-            }
-            Console.ReadKey();
-            Console.Clear();
-
-        }
-        public void FinalCharacter(string choice)
-        {
-            if (choice == "b")
-            {
-                MaleCharacters FinalCharacter = new MaleCharacters();
-                ChooseTrue();
-            }
-            else if (choice == "c")
-            {
-                FemaleCharacters FinalCharacter = new FemaleCharacters();
-                ChooseTrue();
-            }
-            else
-            {
-                Console.WriteLine("Please choose a valid option");
-            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using OOP_PROJECT;
+using OOP_PROJECT.Main_Character_Description;
 using OOP_PROJECT.Places;
 using OOP_PROJECT.Story;
 using System.Runtime.ExceptionServices;
@@ -17,13 +18,15 @@ internal class program
         
         ContextStory contextStory = new ContextStory();
 
-        var choosingCharacters = new ChoosingCharacter();
+        Switch choosingCharacters = new Switch();
+
+        var DescriptionChar = new ChoosingCharacter();
 
         contextStory.Story();
 
         while (!choosingCharacters.ChoosingChar())
         {
-           choosingCharacters.CharacterDescription();
+           DescriptionChar.CharacterDescription();
            string choice = Console.ReadLine().ToLower() ?? "";
            game.Selection(choice);           
         }

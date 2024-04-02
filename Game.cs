@@ -1,4 +1,5 @@
-﻿using OOP_PROJECT.Places;
+﻿using OOP_PROJECT.Main_Character_Description;
+using OOP_PROJECT.Places;
 using OOP_PROJECT.Story;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace OOP_PROJECT
        
 
 
-        ChoosingCharacter choosechar = new ChoosingCharacter();
+       Switch choosechar = new Switch();
        MainStore GoingStore = new MainStore();
        ContextStory ContextStory = new ContextStory();
 
